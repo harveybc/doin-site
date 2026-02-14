@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOIN — Decentralized Optimization and Inference Network</title>
-    <meta name="description" content="A decentralized network where nodes collaboratively optimize ML models and earn rewards. Open source, permissionless, production-grade.">
+    <meta name="description" content="Open-source decentralized network where machines collaboratively optimize ML models AND serve inference. Proof of Optimization consensus. Earn rewards for useful work.">
+    <meta name="keywords" content="decentralized optimization, inference network, machine learning, distributed training, P2P ML, proof of optimization, blockchain ML, genetic algorithms, island model, DOIN, open source, algo trading, timeseries prediction">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DOIN — Decentralized Optimization and Inference Network">
+    <meta property="og:description" content="A P2P network where nodes collaboratively optimize ML models and serve inference. Proof of Optimization consensus — mine by doing useful work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://doin.network">
+    <meta property="og:site_name" content="DOIN Network">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DOIN — Decentralized Optimization and Inference Network">
+    <meta name="twitter:description" content="Mine by optimizing ML models. Earn rewards for useful work. Open source P2P network.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://doin.network">
+
     <meta name="theme-color" content="#0a0a0a">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DOIN - Decentralized Optimization and Inference Network",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Linux, macOS, Windows",
+        "description": "Open-source decentralized network where machines collaboratively optimize ML models and serve inference from the best verified models. Proof of Optimization consensus with native cryptocurrency rewards.",
+        "url": "https://doin.network",
+        "author": {
+            "@type": "Person",
+            "name": "Harvey",
+            "url": "https://github.com/harveybc"
+        },
+        "license": "https://opensource.org/licenses/MIT",
+        "codeRepository": "https://github.com/harveybc/doin-core",
+        "programmingLanguage": "Python",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
     <style>
         :root {
             --bg: #0a0a0a;
@@ -105,7 +149,7 @@
         .hero p {
             font-size: 1.2rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 640px;
             margin: 0 auto 40px;
         }
         .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -297,6 +341,35 @@
             margin-top: 8px;
         }
 
+        /* ── Use Cases ───────────────────────────────── */
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .use-case {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: border-color 0.2s;
+        }
+        .use-case:hover { border-color: var(--accent-dim); }
+        .use-case .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            background: var(--accent-glow);
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .use-case h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+        .use-case p { color: var(--text-muted); font-size: 0.9rem; }
+
         /* ── Footer ──────────────────────────────────── */
         footer {
             border-top: 1px solid var(--border);
@@ -306,7 +379,7 @@
             font-size: 0.85rem;
         }
         footer a { color: var(--text-muted); }
-        .footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 16px; }
+        .footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
 
         /* ── Responsive ──────────────────────────────── */
         @media (max-width: 640px) {
@@ -316,6 +389,7 @@
             .hero p { font-size: 1rem; }
             .grid { grid-template-columns: 1fr; }
             .stats { grid-template-columns: repeat(2, 1fr); }
+            .use-case-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -327,8 +401,10 @@
         <div class="logo"><span>⚡</span> DOIN</div>
         <div class="nav-links">
             <a href="#how-it-works">How it Works</a>
+            <a href="#use-cases">Use Cases</a>
             <a href="#features">Features</a>
             <a href="#economics">Economics</a>
+            <a href="https://www.moltbook.com/u/Dragon_DOIN">Community</a>
             <a href="https://github.com/harveybc/doin-core" class="btn-nav">GitHub →</a>
         </div>
     </div>
@@ -337,9 +413,9 @@
 <!-- Hero -->
 <section class="hero">
     <div class="container">
-        <div class="hero-badge">Open Source · 570 tests · <span>Production-grade</span></div>
-        <h1>Optimize ML models.<br><span class="gradient">Get paid for it.</span></h1>
-        <p>DOIN is a decentralized network where nodes collaboratively optimize machine learning models and earn native cryptocurrency rewards proportional to their contributions.</p>
+        <div class="hero-badge">Open Source · 570+ tests · <span>Production-grade</span></div>
+        <h1>Optimize ML models.<br>Serve inference.<br><span class="gradient">Get paid for it.</span></h1>
+        <p>DOIN is a decentralized network where nodes collaboratively optimize machine learning models, serve inference from the best verified models, and earn native cryptocurrency rewards — all through useful work.</p>
         <div class="hero-actions">
             <a href="#quickstart" class="btn btn-primary">Get Started</a>
             <a href="https://github.com/harveybc/doin-core" class="btn btn-secondary">
@@ -366,7 +442,7 @@
     <div class="container">
         <div class="section-label">How it Works</div>
         <h2>Proof of Optimization</h2>
-        <p>Instead of burning energy on pointless hash puzzles, DOIN nodes prove they've done useful ML work. Better models = bigger rewards.</p>
+        <p>Instead of burning energy on pointless hash puzzles, DOIN nodes prove they've done useful ML work. Better models = bigger rewards. Anyone can query the network for inference from the best verified models.</p>
 
         <div class="arch-diagram"><span class="hl">Optimizer</span> trains a model, commits a hash of the result      <span class="dim">← anti front-running</span>
     ↓
@@ -378,7 +454,51 @@ Each <span class="hl">Evaluator</span> tests on DIFFERENT synthetic data        
     ↓
 Quorum votes → accepted or rejected                               <span class="dim">← consensus</span>
     ↓
-<span class="hl">Block</span> mined → rewards distributed by contribution weight        <span class="dim">← Proof of Optimization</span></div>
+<span class="hl">Block</span> mined → rewards distributed by contribution weight        <span class="dim">← Proof of Optimization</span>
+    ↓
+Best verified model available for <span class="hl">Inference</span> requests             <span class="dim">← L2 payment channels</span></div>
+    </div>
+</section>
+
+<!-- Use Cases -->
+<section id="use-cases">
+    <div class="container">
+        <div class="section-label">Use Cases</div>
+        <h2>Continuous optimization + live inference</h2>
+        <p>DOIN handles both training and serving. Models keep improving while you query them.</p>
+
+        <div class="use-case-grid">
+            <div class="use-case">
+                <div class="tag">Optimization + Inference</div>
+                <h3>📈 Algorithmic Trading</h3>
+                <p>Continuously optimize trading models that adapt to changing market conditions. Query for fresh predictions via the inference API. Tiny accuracy improvements past the Naive threshold → exponentially larger profits.</p>
+            </div>
+            <div class="use-case">
+                <div class="tag">Optimization + Inference</div>
+                <h3>📊 Timeseries Prediction</h3>
+                <p>Financial data, sensor data, demand forecasting — any timeseries domain. The network keeps optimizing while you consume predictions. Models never go stale.</p>
+            </div>
+            <div class="use-case">
+                <div class="tag">Optimization</div>
+                <h3>🧬 Genetic Algorithms</h3>
+                <p>DEAP, NEAT, or any evolutionary approach. DOIN implements the <strong>island model</strong> — each node is an island running at its own speed, sharing champion solutions. Proven to reduce optimization time with zero synchronization overhead.</p>
+            </div>
+            <div class="use-case">
+                <div class="tag">Optimization + Inference</div>
+                <h3>🤖 AI Agent Services</h3>
+                <p>Agents can offload both training and inference to the network. Pay with DOIN coin per query, get predictions from continuously-improving verified models. No GPU required on your end.</p>
+            </div>
+            <div class="use-case">
+                <div class="tag">Optimization</div>
+                <h3>🔬 Hyperparameter Search</h3>
+                <p>Distributed hyperparameter optimization across untrusted machines. The synthetic data verification ensures results are genuine — no one can fake a good model.</p>
+            </div>
+            <div class="use-case">
+                <div class="tag">Inference</div>
+                <h3>🌐 Model Marketplace</h3>
+                <p>The best verified models are available for inference. Pay per query through L2 payment channels. Lightning-fast micropayments, settle on-chain when done.</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -444,7 +564,7 @@ Quorum votes → accepted or rejected                               <span class=
     <div class="container">
         <div class="stats">
             <div class="stat">
-                <div class="stat-value">570</div>
+                <div class="stat-value">570+</div>
                 <div class="stat-label">Tests passing</div>
             </div>
             <div class="stat">
@@ -468,7 +588,7 @@ Quorum votes → accepted or rejected                               <span class=
     <div class="container">
         <div class="section-label">Tokenomics</div>
         <h2>DOIN Coin</h2>
-        <p>Bitcoin-style economics adapted for useful work. Miners don't solve pointless puzzles — they optimize ML models.</p>
+        <p>Bitcoin-style economics adapted for useful work. Miners don't solve pointless puzzles — they optimize ML models and serve inference.</p>
 
         <div class="econ-grid">
             <div class="econ-card">
@@ -543,7 +663,7 @@ Quorum votes → accepted or rejected                               <span class=
             </div>
             <div class="card">
                 <h3>doin-plugins</h3>
-                <p>Domain-specific plugins. Bridges to existing ML projects (like <a href="https://github.com/harveybc/predictor">predictor</a>) without changing their code.</p>
+                <p>Domain-specific plugins. Bridges to existing ML projects (like <a href="https://github.com/harveybc/predictor">predictor</a> and <a href="https://github.com/harveybc/heuristic-strategy">heuristic-strategy</a>) without changing their code.</p>
                 <div style="margin-top: 12px; font-size: 0.8rem; color: var(--text-dim);">
                     <a href="https://github.com/harveybc/doin-plugins">github.com/harveybc/doin-plugins</a>
                 </div>
@@ -553,6 +673,42 @@ Quorum votes → accepted or rejected                               <span class=
                 <p>Write a plugin for any ML domain. Optimization, inference, and synthetic data generation — three entry points, done.</p>
                 <div style="margin-top: 12px; font-size: 0.8rem; color: var(--text-dim);">
                     Python 3.10+ · Pydantic v2 · setuptools entry points
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Projects -->
+<section id="ecosystem">
+    <div class="container">
+        <div class="section-label">Ecosystem</div>
+        <h2>Built on real ML projects</h2>
+        <p>DOIN wraps existing production systems. These are the first domains running on the network.</p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Predictor</h3>
+                <p>Timeseries prediction system with plugin architecture. Multi-input multi-output models, configurable preprocessing, multiple training backends. Includes OLAP cube for experiment analytics.</p>
+                <div style="margin-top: 12px; font-size: 0.8rem; color: var(--text-dim);">
+                    <a href="https://github.com/harveybc/predictor">github.com/harveybc/predictor</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>Heuristic Strategy</h3>
+                <p>Algorithmic trading with heuristic optimization. Pairs with Predictor for signal generation. OLAP analytics show how Sharpe ratio scales exponentially past the Naive MAE threshold.</p>
+                <div style="margin-top: 12px; font-size: 0.8rem; color: var(--text-dim);">
+                    <a href="https://github.com/harveybc/heuristic-strategy">github.com/harveybc/heuristic-strategy</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔄</div>
+                <h3>Timeseries GAN</h3>
+                <p>Synthetic timeseries data generator. Critical for DOIN's verification system — produces realistic data that evaluators use to test models independently.</p>
+                <div style="margin-top: 12px; font-size: 0.8rem; color: var(--text-dim);">
+                    <a href="https://github.com/harveybc/timeseries-gan">github.com/harveybc/timeseries-gan</a>
                 </div>
             </div>
         </div>
@@ -595,7 +751,12 @@ EOF</span>
 <span class="cmd">doin-node</span> <span class="flag">--config</span> config.json
 
 <span class="comment"># Check status</span>
-<span class="cmd">curl</span> http://localhost:8470/status</div>
+<span class="cmd">curl</span> http://localhost:8470/status
+
+<span class="comment"># Submit an inference request</span>
+<span class="cmd">curl</span> -X POST http://localhost:8470/inference \
+  -H <span class="string">"Content-Type: application/json"</span> \
+  -d <span class="string">'{"domain_id": "my-ml-domain", "input_data": {"features": [...]}}'</span></div>
     </div>
 </section>
 
@@ -603,10 +764,10 @@ EOF</span>
 <section style="padding: 100px 0; text-align: center;">
     <div class="container">
         <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Ready to contribute?</h2>
-        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto 40px;">DOIN is open source and permissionless. Run a node, optimize models, earn rewards.</p>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto 40px;">DOIN is open source and permissionless. Run a node, optimize models, serve inference, earn rewards.</p>
         <div class="hero-actions">
             <a href="https://github.com/harveybc/doin-core" class="btn btn-primary">View on GitHub</a>
-            <a href="https://github.com/harveybc/doin-core/blob/master/docs/INSTALL.md" class="btn btn-secondary">Read the Docs</a>
+            <a href="https://www.moltbook.com/u/Dragon_DOIN" class="btn btn-secondary">🦞 Join the Community</a>
         </div>
     </div>
 </section>
@@ -616,9 +777,11 @@ EOF</span>
     <div class="container">
         <div class="footer-links">
             <a href="https://github.com/harveybc/doin-core">GitHub</a>
-            <a href="https://github.com/harveybc/doin-core/blob/master/docs/NETWORK.md">Network Docs</a>
-            <a href="https://github.com/harveybc/doin-core/blob/master/docs/SECURITY.md">Security</a>
-            <a href="https://github.com/harveybc/doin-core/blob/master/docs/SCALABILITY.md">Scalability</a>
+            <a href="https://github.com/harveybc/doin-node">Node</a>
+            <a href="https://github.com/harveybc/doin-plugins">Plugins</a>
+            <a href="https://github.com/harveybc/predictor">Predictor</a>
+            <a href="https://github.com/harveybc/heuristic-strategy">Heuristic Strategy</a>
+            <a href="https://www.moltbook.com/u/Dragon_DOIN">Moltbook</a>
         </div>
         <p>MIT License · Built by <a href="https://github.com/harveybc">harveybc</a></p>
     </div>
