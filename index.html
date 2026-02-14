@@ -413,7 +413,7 @@
 <!-- Hero -->
 <section class="hero">
     <div class="container">
-        <div class="hero-badge">Open Source · 570+ tests · <span>Production-grade</span></div>
+        <div class="hero-badge">Open Source · 611+ tests · <span>Production-grade</span></div>
         <h1>Optimize ML models.<br>Serve inference.<br><span class="gradient">Get paid for it.</span></h1>
         <p>DOIN is a decentralized network where nodes collaboratively optimize machine learning models, serve inference from the best verified models, and earn native cryptocurrency rewards — all through useful work.</p>
         <div class="hero-actions">
@@ -455,6 +455,8 @@ Each <span class="hl">Evaluator</span> tests on DIFFERENT synthetic data        
 Quorum votes → accepted or rejected                               <span class="dim">← consensus</span>
     ↓
 <span class="hl">Block</span> mined → rewards distributed by contribution weight        <span class="dim">← Proof of Optimization</span>
+    ↓
+Experiment metrics recorded on-chain with each accepted optimae    <span class="dim">← distributed OLAP cube</span>
     ↓
 Best verified model available for <span class="hl">Inference</span> requests             <span class="dim">← L2 payment channels</span></div>
     </div>
@@ -555,6 +557,21 @@ Best verified model available for <span class="hl">Inference</span> requests    
                 <h3>GPU Marketplace</h3>
                 <p>Nodes advertise compute resources. Jobs match to hardware automatically by price, reputation, latency, and domain specialization.</p>
             </div>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>On-Chain OLAP Cube</h3>
+                <p>Every accepted optimae carries experiment metrics. The blockchain IS your distributed analytics database. Feed it into Metabase or train an L3 meta-optimizer across all participants.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Smart Stop Criteria</h3>
+                <p>Set target_performance per domain. Nodes automatically stop optimizing converged domains, focusing compute on what still needs work.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧬</div>
+                <h3>Three-Level Optimization</h3>
+                <p>L1: Keras/AdamW trains individual models. L2: Genetic algorithms decentralized across DOIN nodes. L3: Deep learning meta-optimizer trained on OLAP data from ALL network participants.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -564,7 +581,7 @@ Best verified model available for <span class="hl">Inference</span> requests    
     <div class="container">
         <div class="stats">
             <div class="stat">
-                <div class="stat-value">570+</div>
+                <div class="stat-value">611+</div>
                 <div class="stat-label">Tests passing</div>
             </div>
             <div class="stat">
@@ -734,6 +751,7 @@ Best verified model available for <span class="hl">Inference</span> requests    
   "bootstrap_peers": ["seed1.doin.network:8470"],
   "storage_backend": "sqlite",
   "network_protocol": "gossipsub",
+  "experiment_stats_file": "./stats.csv",
   "domains": [
     {
       "domain_id": "my-ml-domain",
@@ -741,7 +759,8 @@ Best verified model available for <span class="hl">Inference</span> requests    
       "evaluate": true,
       "has_synthetic_data": true,
       "optimization_plugin": "my_optimizer",
-      "synthetic_data_plugin": "my_synth_gen"
+      "synthetic_data_plugin": "my_synth_gen",
+      "target_performance": -1.0
     }
   ]
 }
