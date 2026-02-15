@@ -403,6 +403,7 @@
             <a href="#how-it-works">How it Works</a>
             <a href="#use-cases">Use Cases</a>
             <a href="#features">Features</a>
+            <a href="#benchmarks">Benchmarks</a>
             <a href="#economics">Economics</a>
             <a href="https://www.moltbook.com/u/Dragon_DOIN">Community</a>
             <a href="https://github.com/harveybc/doin-core" class="btn-nav">GitHub →</a>
@@ -413,7 +414,7 @@
 <!-- Hero -->
 <section class="hero">
     <div class="container">
-        <div class="hero-badge">Open Source · 611+ tests · <span>Production-grade</span></div>
+        <div class="hero-badge">Open Source · 623 tests · <span>Production-grade</span></div>
         <h1>Optimize ML models.<br>Serve inference.<br><span class="gradient">Get paid for it.</span></h1>
         <p>DOIN is a decentralized network where nodes collaboratively optimize machine learning models, serve inference from the best verified models, and earn native cryptocurrency rewards — all through useful work.</p>
         <div class="hero-actions">
@@ -593,10 +594,49 @@ Best verified model available for <span class="hl">Inference</span> requests    
                 <div class="stat-label">Max coin supply</div>
             </div>
             <div class="stat">
-                <div class="stat-value">611+</div>
+                <div class="stat-value">623</div>
                 <div class="stat-label">Tests passing</div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Benchmarks -->
+<section id="benchmarks">
+    <div class="container">
+        <div class="section-label">Benchmarks</div>
+        <h2>Real multi-node results</h2>
+        <p>Tested on a LAN with consumer hardware. No cloud, no datacenter — just laptops on a local network running GossipSub peer discovery.</p>
+
+        <div class="grid" style="margin-bottom: 32px;">
+            <div class="card">
+                <h3>Easy Target (−100.0)</h3>
+                <p style="margin-bottom: 16px;">Quadratic domain, random-step optimizer</p>
+                <div style="font-family: 'SF Mono', monospace; font-size: 0.85rem; line-height: 2;">
+                    <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Single node</span><span>39 rounds</span></div>
+                    <div style="display: flex; justify-content: space-between;"><span style="color: var(--accent);">Dragon + Omega</span><span style="color: var(--accent); font-weight: 700;">5–6 rounds (7× faster)</span></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Hard Target (−50.0)</h3>
+                <p style="margin-bottom: 16px;">Quadratic domain, random-step optimizer</p>
+                <div style="font-family: 'SF Mono', monospace; font-size: 0.85rem; line-height: 2;">
+                    <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Omega solo (RTX 4070)</span><span>95 rounds · 1592s</span></div>
+                    <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Dragon solo (RTX 4090)</span><span>100 rounds · 1681s</span></div>
+                    <div style="display: flex; justify-content: space-between;"><span style="color: var(--accent);">Combined</span><span style="color: var(--accent); font-weight: 700;">78 rounds · 19% faster</span></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Delta baseline (SLI 2× GFX 550M)</h3>
+                <p style="margin-bottom: 16px;">Hard target, same domain — old hardware</p>
+                <div style="font-family: 'SF Mono', monospace; font-size: 0.85rem; line-height: 2;">
+                    <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Best at 1680s</span><span>−124.01 (not converged)</span></div>
+                    <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">vs Dragon/Omega</span><span>~−48 in same time</span></div>
+                    <div style="color: var(--text-dim); font-size: 0.8rem; margin-top: 8px;">3–4× slower convergence — perfect candidate for island model benefit</div>
+                </div>
+            </div>
+        </div>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">These results use a simple random-step optimizer. With real GA/NEAT crossover and champion migration, multi-node speedups will be significantly higher — the island model architecture is designed for evolutionary algorithms.</p>
     </div>
 </section>
 
