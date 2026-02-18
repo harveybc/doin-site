@@ -414,7 +414,7 @@
 <!-- Hero -->
 <section class="hero">
     <div class="container">
-        <div class="hero-badge">Open Source · 623 tests · <span>Production-grade</span></div>
+        <div class="hero-badge">Open Source · 612 tests · <span>Production-grade</span></div>
         <h1>Optimize ML models.<br>Serve inference.<br><span class="gradient">Get paid for it.</span></h1>
         <p>DOIN is a decentralized network where nodes collaboratively optimize machine learning models, serve inference from the best verified models, and earn native cryptocurrency rewards — all through useful work.</p>
         <div class="hero-actions">
@@ -459,7 +459,11 @@ Quorum votes → accepted or rejected                               <span class=
     ↓
 Experiment metrics recorded on-chain with each accepted optimae    <span class="dim">← distributed OLAP cube</span>
     ↓
-Best verified model available for <span class="hl">Inference</span> requests             <span class="dim">← L2 payment channels</span></div>
+Champion parameters <span class="hl">migrated</span> to other nodes' populations          <span class="dim">← island model</span>
+    ↓
+Best verified model available for <span class="hl">Inference</span> requests             <span class="dim">← L2 payment channels</span>
+    ↓
+Monitor everything at <span class="hl">:8470/dashboard</span>                            <span class="dim">← real-time web UI</span></div>
     </div>
 </section>
 
@@ -536,7 +540,7 @@ Best verified model available for <span class="hl">Inference</span> requests    
             <div class="card">
                 <div class="card-icon">🌐</div>
                 <h3>Peer Discovery</h3>
-                <p>Bootstrap nodes, peer exchange (PEX), and random walks. Nodes find each other automatically — no central registry needed.</p>
+                <p>LAN scan, bootstrap nodes, and peer exchange (PEX). Nodes find each other automatically — no central registry needed. Zero-config on local networks.</p>
             </div>
             <div class="card">
                 <div class="card-icon">💰</div>
@@ -564,6 +568,16 @@ Best verified model available for <span class="hl">Inference</span> requests    
                 <p>Every accepted optimae carries experiment metrics. The blockchain IS your distributed analytics database. Feed it into Metabase or train an L3 meta-optimizer across all participants.</p>
             </div>
             <div class="card">
+                <div class="card-icon">📡</div>
+                <h3>Real-Time Dashboard</h3>
+                <p>Web UI at :8470/dashboard monitors optimization progress, training, evaluations, chain state, events, and peer connections. API endpoints for every subsystem.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏝️</div>
+                <h3>Island Model Migration</h3>
+                <p>Each node is an island running its own optimizer. Champions are shared via on-chain optimae and injected into other nodes' populations. DEAP GA, NEAT, or any evolutionary algorithm gets automatic distributed parallelism.</p>
+            </div>
+            <div class="card">
                 <div class="card-icon">🎯</div>
                 <h3>Smart Stop Criteria</h3>
                 <p>Set target_performance per domain. Nodes automatically stop optimizing converged domains, focusing compute on what still needs work.</p>
@@ -571,7 +585,7 @@ Best verified model available for <span class="hl">Inference</span> requests    
             <div class="card">
                 <div class="card-icon">🧬</div>
                 <h3>Three-Level Optimization</h3>
-                <p>L1: Keras/AdamW trains individual models. L2: Genetic algorithms decentralized across DOIN nodes. L3: Deep learning meta-optimizer trained on OLAP data from ALL network participants.</p>
+                <p>L1: Keras/AdamW trains individual models. L2: DEAP genetic algorithms decentralized across DOIN nodes (island model). L3: Deep learning meta-optimizer trained on OLAP data from ALL network participants.</p>
             </div>
         </div>
     </div>
@@ -594,7 +608,7 @@ Best verified model available for <span class="hl">Inference</span> requests    
                 <div class="stat-label">Max coin supply</div>
             </div>
             <div class="stat">
-                <div class="stat-value">623</div>
+                <div class="stat-value">612</div>
                 <div class="stat-label">Tests passing</div>
             </div>
         </div>
@@ -636,7 +650,7 @@ Best verified model available for <span class="hl">Inference</span> requests    
                 </div>
             </div>
         </div>
-        <p style="color: var(--text-dim); font-size: 0.9rem;">These results use a simple random-step optimizer. With real GA/NEAT crossover and champion migration, multi-node speedups will be significantly higher — the island model architecture is designed for evolutionary algorithms.</p>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">These results use a simple random-step optimizer. With full DEAP GA crossover/mutation and champion migration injection, multi-node speedups will be significantly higher — the island model architecture is designed for evolutionary algorithms where injected champions create new genetic material for crossover.</p>
     </div>
 </section>
 
