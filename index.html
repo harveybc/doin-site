@@ -585,7 +585,7 @@ Monitor everything at <span class="hl">:8470/dashboard</span>                   
             <div class="card">
                 <div class="card-icon">🧬</div>
                 <h3>Three-Level Optimization</h3>
-                <p>L1: Keras/AdamW trains individual models. L2: DEAP genetic algorithms decentralized across DOIN nodes (island model). L3: Deep learning meta-optimizer trained on OLAP data from ALL network participants.</p>
+                <p><strong>L1 — Candidate Training</strong> (<code>early_patience</code>): Keras early stopping per candidate. <strong>L2 — Stage Progression</strong> (<code>optimization_patience</code>): DEAP GA generations before advancing. <strong>L3 — Meta-Optimizer</strong> (planned): Deep learning predictor trained on OLAP data from ALL network participants.</p>
             </div>
         </div>
     </div>
